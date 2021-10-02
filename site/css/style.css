@@ -1,24 +1,41 @@
-
-/* Style the body */
-body {
-  font-family: Arial;
-  margin: 0;
+body{
+	font-size: 16px;
+	color: #fff;
+	background-color: #61122f;
+	font-family: 'Oxygen', sans-serif;
+	
 }
 
-/* Header/Logo Title */
-.header {
-  padding: 60px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 25px;
-}
+#header-nav{
+	background-color: #f6b319;
+	border-radius: 0;
+	border:0;
 
-/* Page Content */
-.content {padding:20px;}
-footer {
-  text-align: center;
-  padding: 3px;
-  background-color: DarkSalmon;
-  color: white;
+	
+}
+#logo-image{
+	background:url('../images/9030.jpg') no-repeat;
+	width: 100px;
+	height: 100px;
+	margin: 10px 15px 10px 0px;
+	
+}
+.navbar-brand{
+	padding-top: 25px;
+
+}
+.navbar-brand h1{
+	font-family: 'Lora', serif;
+	color: #557c3e;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: .75;
+
+}
+.navbar-brand a:hover, .navbar-brand a:focus{
+	text-decoration: none;
 }
