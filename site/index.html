@@ -19,14 +19,14 @@
 
 <?php
 // define variables and set to empty values
-$name = $email = $gender = $comment = $website = "";
+$sku = $name  = $price  = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $sku = test_input($_POST["sku"]);
   $name = test_input($_POST["name"]);
-  $email = test_input($_POST["email"]);
-  $website = test_input($_POST["website"]);
-  $comment = test_input($_POST["comment"]);
-  $gender = test_input($_POST["gender"]);
+  $price = test_input($_POST["price"]);
+ 
+ 
 }
 
 function test_input($data) {
@@ -35,37 +35,31 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+
 ?>
 
-<h2>PHP Form Validation Example</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name">
+<h2>Product Add</h2>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+  SKU <input type="text" name="sku">
   <br><br>
-  E-mail: <input type="text" name="email">
+  Name <input type="text" name="name">
   <br><br>
-  Website: <input type="text" name="website">
+  Price <input type="text" name="price">
+ 
   <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"></textarea>
-  <br><br>
-  Gender:
-  <input type="radio" name="gender" value="female">Female
-  <input type="radio" name="gender" value="male">Male
-  <input type="radio" name="gender" value="other">Other
-  <br><br>
+ 
   <input type="submit" name="submit" value="Submit">  
 </form>
 
 <?php
 echo "<h2>Your Input:</h2>";
+echo $sku;
+echo "<br>";
 echo $name;
 echo "<br>";
-echo $email;
+echo $price;
 echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
-echo $gender;
+
 ?>
 
 
